@@ -1,0 +1,92 @@
+<DOCTYPE! html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
+    <title> DISNEY+ </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body id = "page1">
+
+    <!--HEADER BAR SECTION-->
+    <section class = "header">
+        <button type="button" id="navMenuButton" onclick = "location.href = 'index.html';">
+            <section id = "nav">
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+        </button>
+
+        <div class = "signInButtonLayout">
+            <div class="signInButtonPos">
+                <button type="button" id = "signInButton" onclick = "location.href = 'index2.html';">Sign In</button>
+            </div>
+        </div>
+    </section>
+
+    <section id = "mainHomepage">
+        <div id = "logoBigPg1">
+            <img src="img/logo_white.png" alt = "Big Disney+ Logo" width = 40%>
+        </div>
+
+            <br>
+
+        <p id = "subtitle">Thousands of shows, movies, and documentaries at your fingertips</p>
+
+    </section>
+
+        <br>
+
+    <p id = "joinMagic">Join the magic now!</p>
+
+        <br>
+
+    <div class = "signUp">
+
+        <form id="emailPg1Form">
+          <div class="form-group">
+            <input type="email" class="email" name="email" placeholder="Email">
+            <div class="messages"></div>
+          </div>
+            <button type="submit" id = "emailSubmit">Continue</button>
+        </form>
+
+    </div>
+
+        <!--Adding the stats along the bottom-->
+    <section id = "footer">
+        <!-- Using divs to have numerous stats with same aesthetic but different content-->
+        <div class="stats">
+            <p class = "number">500</p>
+            <p class = "thing">MOVIES</p>
+        </div>
+
+         <div class="stats">
+            <p class = "number">7,000</p>
+            <p class = "thing">EPISODES</p>
+        </div>
+
+         <div class="stats">
+            <p class = "number">7K</p>
+            <p class = "thing">STREAMING</p>
+        </div>
+
+         <div class="stats">
+            <p class = "number">$8</p>
+            <p class = "thing">A MONTH</p>
+        </div>
+    </section>
+
+<script type="text/javascript" src="validate.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
+    <title> DISNEY+ </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body  id = "#page3">
+    
+        <section class = "headerPg2">
+            <!--HAMBURGER MENU WIP-->
+            <img src="img/logo_white.png" id = "headerLogo" alt="Top Right Logo" width = 8% onclick = "location.href = 'index.html';">
+        
+            <div class = "signInButtonLayout2">
+                <div class="signInButtonPos2">
+                    <button type="button" id = "signInButton2">Sign In</button>
+                </div>
+            </div>
+        </section>
+    
+        <h1 class = "pageTitle">PAYMENT INFORMATION</h1>
+        
+            <!--FIX THIS CSS-->
+    
+    <section>
+        <section class = "formInfo">
+            <form id="formPg3">
+                <div class="form-group">
+                    <div id="radioBox2">
+                        <input type="radio" class="radioBoxOption" name="paymentInfo" value="Credit Card">Credit Card
+                        <input type="radio" class="radioBoxOption" name="paymentInfo" value="PayPal">PayPal
+                        <input type="radio" class="radioBoxOption" name="paymentInfo" value="Gift Card">Gift Card
+                    </div>
+                        <div class="messages"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="cardName" name="cardName" placeholder="Name On Card">
+                        <div class="messages"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="number" id="cardNumber" name="cardNumber" placeholder="Card Number">
+                        <div class="messages"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" id="CVV" name="CVV" placeholder="CVV">
+                            <div class="messages"></div>
+                    </div>
+
+                    <div class="form-group">
+                            <label for="date" id="expiryLabel">Expiry Date</label>
+                        <input type="month" id="cardExpiry" name="cardExpiry" placeholder="Expiry">
+                            <div class="messages"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="agreeConditions" name="agreeConditions">
+                                <label for ="agreeConditions" id="conditionsLabel" >I have read and agreed to the Disney+ Terms and Conditions</label>
+                            <div class="messages"></div>
+                    </div>
+
+                <section class = "continueButton">
+                    <button type = "submit">Continue</button>
+                </section>
+                
+            </form>
+        </section>
+    
+    
+        <section class = "mickeyLogo">
+            <img src ="img/mickey.png" alt = "Mickey Head Logo" width="100%">
+        </section>
+
+    </section>
+    
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="validate.min.js"></script>
+
+    </body>
+    
+</html>
+

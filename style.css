@@ -1,0 +1,917 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Muli', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'WaltographRegular';
+    src: "https://fonts.googleapis.com/css?family=Muli|Noto+Sans&display=swap";
+}
+
+/*body*/
+#page1 {
+    background-color: #1D1E4C;
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#signInButton, #signInButton2 {
+    width: 80px;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+#signInButton {
+    background-color: #1D1E4C;
+    color: white;
+}
+
+.signInButtonPos {
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px;
+    width: 100%;
+}
+
+.signInButtonLayout {
+    display: flex;
+    justify-content: flex-end;
+    width: 95%;
+}
+
+#nav > div {
+    width: 40px;
+    height: 6px;
+    background-color:#1D1E4C;
+    margin-bottom: 7px;
+}
+
+#navMenuButton {
+    border-style: none;
+    background-color: white;
+}
+
+#logoBigPg1, #logoBigPg4 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#logoBigPg1  {
+    margin-top: 8%;
+}
+
+#subtitle {
+    color: white;
+    margin-top: 1%;
+    text-align: center;
+    font-size: 1.65em;
+    font-style: italic;
+    font-family: 'Muli', sans-serif;
+    font-weight: lighter;
+}
+
+#joinMagic {
+    font-family: 'WaltographRegular', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 4em;
+    margin-top: 6.5%;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.signUp {
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 5%;
+
+}
+
+.email {
+    width: 100%;
+    padding: 5px;
+    border: 1px;
+    border-style: solid;
+    border-color: grey;
+    font-size: 1em;
+    justify-content: center;
+}
+
+.email input {
+    width: 100%; 
+}
+
+.messages {
+    font-family: 'Milu', sans-serif;
+    text-align: left;
+    margin-left: 10%; 
+    font-style: italic;
+    color: grey;
+    font-size: .8em;
+    margin-top: 2%; 
+}
+
+#emailSubmit {
+    padding: 5px;
+    font-size: 1em;
+    color: white;
+    background-color: #438DC7;
+    border-color: grey;
+    font-style: italic;
+}
+
+/* only effects the form group on the 2nd page */
+.signUp .form-group {
+    width: 40%; 
+    margin-bottom: -2%; 
+}
+
+.signUp #emailPg1Form {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    justify-content: center;
+}
+
+#footer {
+    height: 25%;
+    width: 100%;
+    background-color: #28305E;
+    color: white;
+        /*setting the layout for the divs within this larger div so its applied to them all consistently*/
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'muli', sans-serif;
+    text-align: center;
+
+}
+
+.stats {
+    vertical-align: middle;
+    width: 25%;
+    margin-top: 2.75%
+
+}
+
+.number {
+    font-size: 3em;
+    font-weight: bolder;
+    margin-bottom: 1.5%;
+}
+
+.thing {
+    font-weight: lighter;
+    font-size: 2em;
+
+}
+
+/* Mobile Styles FOR PAGE 1*/
+@media only screen and (max-width: 600px) {
+
+    .signInButtonPos {
+        display: flex;
+        justify-content: flex-end;
+        padding: 7px;
+        width: 100%;
+    }
+
+    .signInButtonLayout {
+        display: flex;
+        justify-content: flex-end;
+        width: 89%;
+    }
+
+    #logoBigPg1  {
+        margin-top: 8%;
+    }
+
+    #subtitle {
+        font-size: 1.4em;
+        margin-top: 6%;
+    }
+
+    #joinMagic {
+        font-family: 'WaltographRegular', sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        margin-top: 15%;
+        font-weight: lighter;
+        font-style: normal;
+    }
+
+
+    #footer {
+        height: 25%;
+        width: 100%;
+        position: fixed;
+        bottom: -1%;
+        background-color: #28305E;
+        color: white;
+            /*setting the layout for the divs within this larger div so its applied to them all consistently*/
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'muli', sans-serif;
+        text-align: center;
+
+    }
+
+    .stats {
+        vertical-align: middle;
+        width: 50%;
+        margin-top: 2.75%
+
+    }
+
+    .number {
+        font-size: 2em;
+        font-weight: bolder;
+        margin-bottom: 1.5%;
+    }
+
+    .thing {
+        font-weight: lighter;
+        font-size: 1em;
+
+    }
+  }
+
+
+
+/* PAGE TWO */
+
+/* UNIVERSAL ELEMENTS ACROSS BOTH FORM PAGES */
+
+#page2{
+    background-color: white;
+    flex-direction: column;
+}
+
+.headerPg2 {
+    width: 100%;
+    background-color: #1D1E4C;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#headerLogo {
+    padding: 10px;
+}
+
+#signInButton2 {
+    background-color: white;
+    color: #1D1E4C;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+.signInButtonPos2 {
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px;
+    width: 100%;
+}
+
+.signInButtonLayout2 {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+}
+
+.pageTitle {
+    font-family: 'Milu', sans-serif;
+    font-weight: bold;
+    padding: 2.75%; ;
+    font-size: 2em;
+    font-style: italic;
+    color: #1D1E4C;
+    margin-left: 1%;
+}
+
+
+
+/* input form section for 2nd page */
+
+/* layout for all sections */
+
+.formInfo{
+    width: 80%;
+    flex: 1 0 auto;
+    margin-left: 2%;
+}
+
+.formInfo div {
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+input {
+    padding: 1%;
+    width: 60%; 
+}
+
+/* for all the text inside inputs */
+
+.formInfo input {
+    font-size: 1.25em;
+    font-style: italic;
+}
+
+#names {
+    width: 100%;
+    font-size: 1em;
+    margin-right: 3%;
+    flex-wrap: wrap;
+}
+
+
+#firstName + #lastName {
+    width: 30%;
+    flex-wrap: wrap;
+
+}
+
+/* for 2nd section (DOB) */
+
+.formInfo div:nth-of-type(2){
+    font-family: 'Milu', sans-serif;
+    flex-wrap: wrap;
+}
+
+div #dateInput {
+    margin-left: 2%;
+    width: 20%; 
+}
+
+label {
+    font-family: 'Milu', sans-serif; 
+    font-weight: normal;
+    font-style: italic;
+    color: grey;
+}
+
+/* affects both gender (pg2) and payment type (pg3) */
+
+#radioBox1, #radioBox2{
+    padding: 1%;
+    font-family: 'Milu', sans-serif;
+    flex-wrap: wrap;
+    color: grey;
+    font-style: italic;
+    font-size: 1.2em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    display: flex;
+    align-items: center;
+    margin-left: 0%; 
+}
+
+#radioBox1 {
+    width: 40%;
+}
+
+#radioBox1 input {
+    width: 7%;
+}
+
+/* this selector to easily select all radio inputs except the first one for nice layout*/
+.radioBoxOption ~ .radioBoxOption {
+    margin-left: 10%;
+}
+
+/*postcode*/
+#postcode{
+    font-family: 'Milu', sans-serif;
+    flex-wrap: wrap;
+    width: 15%;
+}
+
+.continueButton{
+    margin-left: 60%;
+    width: 50%;
+    margin-top: 3%;
+    margin-bottom: 5%; 
+}
+
+.continueButton button {
+    background-color: #1D1E4C;
+    color: white;
+    width: 35%;
+    padding: 1%;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+/*trying to make continue button aligned with buttom of form*/
+#page2 section:nth-of-type(2){
+    flex-wrap: wrap;
+}
+
+
+/*PAGE 3 */
+
+#page3{
+    background-color: white;
+    flex-direction: column;
+}
+
+.headerPg3 {
+    width: 100%;
+    height: 8%;
+    background-color: #1D1E4C;
+}
+
+
+/* so the payment info can have a different size to the gender radio on previous page */
+
+#radioBox2 {
+    width: 45%;
+}
+
+#radioBox2 input {
+    width: 7%;
+}
+
+#cardName {
+    width: 50%;
+}
+
+
+#cardNumber {
+    width: 50%;
+    margin-right: 2%;
+}
+
+#CVV {
+    width: 12%;
+    margin-right: 2%;
+
+}
+
+#expiryLabel {
+    font-family: 'Milu', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: grey;
+    width: 100%;
+    margin-right: 70%;
+    font-size: 1.1em;
+}
+
+#cardExpiry {
+    margin-top: 1%;
+    width: 30%;
+    font-family: 'Milu', sans-serif;
+}
+
+
+#agreeConditions {
+    margin-left: 6%;
+    margin-bottom: 3%;
+    margin-right: -55%;
+}
+
+#agreeConditions + label {
+    font-family: 'Milu', sans-serif;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+/* MICKEY LOGO AT BOTTOM OF BOTH PAGES */
+
+.mickeyLogo {
+    position: fixed;
+    left: 85%;
+    bottom: -1%;
+}
+
+
+
+/* Mobile Styles FOR PAGE 2 AND 3*/
+@media only screen and (max-width: 600px) {
+
+    /*PAGE 2 */
+    #page2{
+        background-color: white;
+        flex-direction: column;
+    }
+
+    .headerPg2 {
+        width: 100%;
+        background-color: #1D1E4C;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: space-between;
+    }
+
+    #signInButton2 {
+        background-color: white;
+        color: #1D1E4C;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+
+    #headerLogo {
+        padding: 10px;
+        width: 20%;
+    }
+
+    .signInButtonPos2 {
+        display: flex;
+        justify-content: flex-end;
+        padding: 7px;
+        width: 100%;
+    }
+
+    .signInButtonLayout2 {
+        display: flex;
+        justify-content: flex-end;
+        width: 80%;
+    }
+
+    .pageTitle {
+        font-size: 1.5em;
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+
+    /* input form section for 2nd page */
+
+    /* layout for all sections */
+
+    #formPg2 {
+        width: 80%; 
+    }
+    .formInfo{
+        width: 96%;
+    }
+
+    .formInfo div {
+        margin-bottom: 2%;
+        margin-left: 2%;
+    }
+
+    input {
+        border-style: solid;
+        border-color: lightgray;
+        border-width: thin;
+        padding: 2%;
+    }
+
+    .messages {
+        font-family: 'Milu', sans-serif;
+        margin-left: 40%; 
+        font-style: italic;
+        color: lightgray;
+        font-size: .8em;
+        margin-top: -3px; 
+        margin-bottom: 2%; 
+    }
+
+    /* for all the text inside inputs */
+    .formInfo input {
+        font-size: 1.1em;
+        font-style: italic;
+    }
+
+    /* for first section (name) */
+    #formPg2 div:first-of-type {
+        width: 100%;
+        font-size: 1em;
+        margin-right: 3%;
+    }
+
+    /* have to have these seperate bc doesnt work otherwise due to the way it wraps */
+    #firstName {
+        margin-bottom: 5%;
+    }
+
+    #lastName {
+        margin-bottom: 5%;
+    }
+
+
+    #firstName + #lastName {
+        width: 80%;
+        flex-wrap: wrap;
+    }
+
+    /* for 2nd section (DOB) */
+
+    .formInfo div:nth-of-type(2){
+        font-family: 'Milu', sans-serif;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+    }
+
+    div #dateInput {
+        margin-left: 2%;
+        margin-bottom: 4%; 
+    }
+
+    label {
+        font-family: 'Milu', sans-serif; 
+        font-weight: normal;
+        font-style: italic;
+        color: grey;
+    }
+
+    /* affects both gender (pg2) and payment type (pg3) */
+    /* these like to mess up very easily so ill leave all the working css to be safe */
+    #radioBox1, #radioBox2{
+        padding: 2%;
+        font-family: 'Milu', sans-serif;
+        flex-wrap: wrap;
+        color: grey;
+        font-style: italic;
+        font-size: 1.1em;
+        border-style: solid;
+        border-width: 1px;
+        border-color: lightgray;
+        display: flex;
+        align-items: center;
+        margin-bottom: 6%;
+    }
+
+    #radioBox1 {
+        width: 80%;
+    }
+
+    #radioBox1 input {
+        width: 10%;
+    }
+
+    /* this selector to easily select all radio inputs except the first one for nice layout*/
+    .radioBoxOption ~ .radioBoxOption {
+        margin-left: 10%;
+    }
+
+    /*postcode*/
+    #postcode{
+        font-family: 'Milu', sans-serif;
+        flex-wrap: wrap;
+        width: 29%;
+        margin-bottom: 3%;
+    }
+
+    #email2ndPage {
+        margin-bottom: 5%;
+    }
+
+    #password {
+        margin-bottom: 5%;
+    }
+
+    /*this layout is real funky but its the only way i can get it to work so shes staying */
+    .continueButton{
+        width: 95%;
+        margin-top: 13%;
+        margin-left: -15%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .continueButton button {
+        background-color: #1D1E4C;
+        color: white;
+        width: 40%;
+        padding: 1%;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+
+    /* PAGE 3*/
+
+
+    #radioBox2 {
+        width: 95%;
+    }
+
+    #radioBox2 input {
+        width: 6%;
+    }
+
+    #cardName {
+        width: 70%;
+        margin-bottom: 5%; 
+    }
+
+    #cardInfo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #cardNumber {
+        width: 75%;
+        margin-right: 2%;
+        margin-bottom: 5%;
+    }
+
+    #CVV {
+        width: 16%;
+        margin-top: 2%; 
+        margin-right: 2%;
+        margin-bottom: 5%;
+    }
+
+    #cardExpiry {
+        margin-top: 1%;
+        width: 60%;
+        font-family: 'Milu', sans-serif;
+        margin-bottom: 5%; 
+    }
+
+    #formPg3 div:nth-of-type(5){
+        margin-top: 5%;
+        width: 90%;
+    }
+
+    #agreeConditions {
+        margin-left: 0%;
+        margin-bottom: 3%;
+    }
+
+    #agreeConditions + label {
+        margin-top: 5%; 
+        margin-left: 30%; 
+        font-family: 'Milu', sans-serif;
+        font-size: 1.1em;
+        margin-bottom: 10%;
+    }
+
+    #agreeConditions + .messages {
+        margin-top: 5%; 
+    }
+
+}
+
+
+/*PAGE 4 - CONFIRMATION PAGE*/
+
+#page4 {
+    background-color: #1D1E4C;
+}
+
+#logoDark {
+    position: fixed;
+    left: 92%;
+    margin-top: -1.3%;
+    padding: 1%;
+
+}
+
+#logoBigPg4  {
+    margin-top: 3.5%;
+}
+
+
+#welcome {
+    font-family: 'Milu', sans-serif;
+    font-size: 3em;
+    color: white;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    /* negative margin to pull disney+ logo up without editing its css */
+    margin-top: -20%;
+}
+
+#confirmationMessage {
+    font-family: 'Milu', sans-serif;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 20%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#mickeyLight {
+    position: fixed;
+    left: 85%;
+    bottom: -1%;
+}
+
+
+
+#watchButton {
+    background-color: #438DC7;
+    color: white;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1.5%;
+    margin-top: 4%;
+    border-style: solid;
+    border-color: grey;
+}
+
+#watchButtonSection {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Mobile Styles FOR PAGE 4*/
+@media only screen and (max-width: 600px) {
+
+    #logoDark {
+        left: 78%;
+        width: 20%;
+    }
+
+    #logoBigPg4  {
+        margin-top: 20%;
+    }
+
+
+    #welcome {
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        /* negative margin to pull disney+ logo up without editing its css */
+        margin-top: -35%;
+    }
+
+    #confirmationMessage {
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+        font-size: 1.7em;
+        margin-top: 30%;
+    }
+
+
+
+    #watchButton {
+        background-color: #438DC7;
+        width: 90%;
+        color: white;
+        font-size: 1.7em;
+        font-style: italic;
+        font-weight: bold;
+        padding: 2.9%;
+        margin-top: 10%;
+        border-style: solid;
+        border-color: grey;
+    }
+
+    #watchButtonSection {
+        display: flex;
+        justify-content: center;
+    }
+
+    #appStore p {
+        font-family: 'Milu', sans-serif;
+        font-size: 1.6em;
+        font-style: italic;
+        font-weight: 500;
+        text-align: center;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 17%;
+        margin-bottom: 8%;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+    #appStore img {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+ /* so the app store stuff only shows up when on mobile */
+@media only screen and (min-width: 601px) {
+    #appStore p {
+      visibility: hidden;
+    }
+
+    #appStore img {
+        visibility: hidden;
+        width: 1%;
+    }
+}

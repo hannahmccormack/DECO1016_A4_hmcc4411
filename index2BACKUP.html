@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
+    <title> DISNEY+ </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body  id = "#page2">
+
+    <section class = "headerPg2">
+    
+        <img src="img/logo_white.png" id = "headerLogo" alt="Top Right Logo" width = 8%>
+
+        <div class = "signInButtonLayout2">
+            <div class="signInButtonPos2">
+                <button type="button" id = "signInButton2">Sign In</button>
+            </div>
+        </div>
+
+    </section>
+
+    <h1 class = "pageTitle">PERSONAL INFORMATION</h1>
+    
+        <!--FIX THIS CSS-->
+
+    <section>
+        <section class = "formInfo">
+            <form id="formPg2">
+                    <div>
+                        <div class="form-group>
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                            <div class="messages"></div>
+                        </div>
+
+                        <div class="form-group>
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                            <div class="messages"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group>
+                            <label for="date">Date of Birth</label>
+                        <input type="date" id="dateInput" name="dateInput" placeholder="Date">
+                        <div class="messages"></div>
+                    </div>
+
+                    <div id="radioBox1">
+                        <input type="radio" class="radioBoxOption" name="gender" value="male">Male
+                        <input type="radio" class="radioBoxOption" name="gender" value="female">Female
+                        <input type="radio" class="radioBoxOption" name="gender" value="other">Other
+                    </div>
+
+                    <div>
+                        <input type="number" id="postcode" name="postcode" placeholder="Postcode">
+                        <div class="messages"></div>
+                    </div>
+                
+                    <div>
+                        <div>
+                            <input type="email" name="email" placeholder="Email" id="email2ndPage">
+                            <div class="messages"></div>
+                        </div>
+
+                        <div>
+                            <input type="password" name="password" placeholder="Password">
+                            <div class="messages"></div>
+        
+                        </div>
+
+                    </div>
+                </div>
+
+                <section class = "continueButton">
+                    <button type = "submit">Continue</button>
+                </section>
+            </form>
+        </section>
+
+
+
+        <section class = "mickeyLogo">
+            <img src ="img/mickey.png" alt = "Mickey Head Logo" width=100%>
+        </section>
+    </section>
+
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="validate.min.js"></script>
+
+</body>
+
+</html>
