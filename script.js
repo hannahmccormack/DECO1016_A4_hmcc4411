@@ -52,17 +52,9 @@ var constraints2 = {
     presence: true
   }, 
 
-  postcode: {
-    length: {
-      is: 4, 
-    },
-    format: {
-      message: " must be 4 digits"
-    },
-  }
 
 
-};
+}
 
 var constraints3 = {
   
@@ -78,28 +70,24 @@ var constraints3 = {
     presence:true
   }, 
 
-  CVV: {
-    presence: true, 
-    length: {
-      is: 3, 
-    }, 
-    format: {
-      message: " must be 3 digits"
-    }, 
-  },
-
   cardExpiry: {
     presence: true
-  },
+  }, 
 
+  CVV: {
+    presence: true
+  }, 
+
+  //this is real funky but its the only way I can make the checkbox work
   agreeConditions: {
-    presence: true,
-    format: {
-      message: "must be checked"
-    },
-  }
-
-
+    presence: {
+      message: "^You need to check the checkbox"
+    }, 
+    inclusion: {
+      within: [true], 
+      message: "^You need to check the checkbox"
+    }, 
+  }, 
 }
 
 //page 1
@@ -239,12 +227,13 @@ function addError(messages, error) {
 
 //APPENDING NODES / GET ELEMENT BY ID STUFF ??
 
-var congratsMessage = document.getElementById("confirmationMessage");
-congratsMessage.innerHTML = "New Heading";
+var congratsMessage = document.getElementById("congratsName");
+var userName = document.getElementsById("firstName"); 
+var nameNode = document.createTextNode("Test"); 
+
+congratsMessage.appendChild(nameNode); 
 
 //append name to new text thing
 //then append text thing to div for congrats message
-
-var userName = document.getElementsByName(firstName); 
 
 //append username to congrats message ?? but somehow have to add name in

@@ -809,14 +809,27 @@ label {
     margin-top: -20%;
 }
 
+#congratsName {
+    font-family: 'Milu', sans-serif;
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 17%;
+    color: white;
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: center;
+}
+
 #confirmationMessage {
     font-family: 'Milu', sans-serif;
     font-size: 2em;
     font-style: italic;
     font-weight: 500;
-    margin-top: 20%;
+    margin-top: 2%;
     color: white;
     display: flex;
+    flex-wrap: nowrap; 
     justify-content: center;
 }
 
@@ -827,10 +840,10 @@ label {
 }
 
 
-
 #watchButton {
     background-color: #438DC7;
     color: white;
+    width: 30%; 
     font-size: 2em;
     font-style: italic;
     font-weight: bold;
@@ -867,14 +880,31 @@ label {
         margin-top: -35%;
     }
 
-    #confirmationMessage {
-        width: 80%;
-        margin-left: 10%;
-        text-align: center;
+    #congratsName {
+        font-family: 'Milu', sans-serif;
         font-size: 1.7em;
-        margin-top: 30%;
+        font-style: italic;
+        font-weight: 500;
+        margin-top: 31%;
+        color: white;
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: center;
     }
-
+    
+    #confirmationMessage {
+        font-family: 'Milu', sans-serif;
+        font-size: 1.7em;
+        font-style: italic;
+        font-weight: 500;
+        margin-top: 2%;
+        color: white;
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: center;
+        text-align: center;
+    }
+  
 
 
     #watchButton {
@@ -903,7 +933,7 @@ label {
         text-align: center;
         width: 80%;
         margin-left: 10%;
-        margin-top: 17%;
+        margin-top: 13%;
         margin-bottom: 8%;
         color: white;
         display: flex;
