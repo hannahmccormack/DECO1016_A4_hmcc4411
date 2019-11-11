@@ -1,3 +1,5 @@
+//SETTING UP CUSTOM CONSTRAINTS FOR EACH PAGE
+
 var constraints1 = {
   email: {
     presence: true,
@@ -5,6 +7,7 @@ var constraints1 = {
   }
 }
 
+//PAGE 2 CONSTRAINTS
 var constraints2 = {
 
   firstName: {
@@ -42,8 +45,6 @@ var constraints2 = {
     }
   },
 
-  //NAUGHTY ELEMENTS GO HERE
-
   DOB: {
     presence: true
   }, 
@@ -52,10 +53,9 @@ var constraints2 = {
     presence: true
   }, 
 
-
-
 }
 
+//PAGE THREE CONSTRAINTS
 var constraints3 = {
   
   paymentInfo: {
@@ -90,8 +90,12 @@ var constraints3 = {
   }, 
 }
 
-//page 1
+//Making the constraints take action 
 
+//PAGE 1
+
+//this function goes through the process of validating the form against the criteria
+//and then when successful submits the form and goes to the next page
 var form = document.querySelector("#emailPg1Form");
 if(form){
   form.addEventListener("submit", function(ev) {
@@ -100,6 +104,7 @@ if(form){
   });
 }
 
+//this is the function for validating and submitting the forms
 function handleFormSubmit(form, input) {
   console.log(form);
   var errors = validate(form, constraints1);
@@ -109,11 +114,14 @@ function handleFormSubmit(form, input) {
   }
 }
 
+//this is the function for going to the next page
 function redirect() {
   window.location = "index2.html";
 }
 
-//page 2
+//PAGE 2
+
+//same functions just different names and variables
 var form2 = document.querySelector("#formPg2");
 if(form2){
   form2.addEventListener("submit", function(ev) {
@@ -128,6 +136,7 @@ function handleFormSubmit2(form2, input) {
   showErrors(form2, errors || {});
   if (!errors) {
     redirectPg2();
+    storeName();
   }
 }
 
@@ -135,7 +144,7 @@ function redirectPg2() {
   window.location = "index3.html";
 }
 
-//page 3
+//PAGE 3
 
 var form3 = document.querySelector("#formPg3");
 if(form3){
@@ -158,29 +167,22 @@ function redirectPg3() {
   window.location = "index4.html";
 }
 
-// Updates the inputs with the validation errors
+//SECTION FOR THE ACTUAL VALIDATION FUNCTION
+
+// This is the function to show the erros 
 function showErrors(form, errors) {
-  // We loop through all the inputs and show the errors for that input
   form.querySelectorAll("input[name], select[name]").forEach( function(input) {
-    // Since the errors can be null if no errors were found we need to handle
-    // that
     showErrorsForInput(input, errors && errors[input.name]);
   });
 }
 
 // Shows the errors for a specific input
 function showErrorsForInput(input, errors) {
-  // This is the root of the input
   var formGroup = closestParent(input.parentNode, "form-group")
-    // Find where the error messages will be insert into
     , messages = formGroup.querySelector(".messages");
-  // First we remove any old messages and resets the classes
   resetFormGroup(formGroup);
-  // If we have errors
   if (errors) {
-    // we first mark the group has having errors
     formGroup.classList.add("has-error");
-    // then we append all the errors
     errors.forEach(function(error) {
       addError(messages, error);
     });
@@ -212,8 +214,7 @@ function resetFormGroup(formGroup) {
   });
 }
 
-// Adds the specified error with the following markup
-// <p class="help-block error">[message]</p>
+//this is the function for showing the error on the screen
 function addError(messages, error) {
   var block = document.createElement("p");
   block.classList.add("help-block");
@@ -222,18 +223,20 @@ function addError(messages, error) {
   messages.appendChild(block);
 }
 
+showName(); 
 
-//STUFF TO ADD NAME INTO FINAL PAGE
+//ADDING NAME TO CONFIRMATION MESSAGE
+function storeName(){
+  //creating a variable for the persons name
+  var userName = document.getElementById("firstName").value; 
+  //storing the name in local storage
+  localStorage.setItem("firstName", userName); 
+}
 
-//APPENDING NODES / GET ELEMENT BY ID STUFF ??
+function showName(){
+    //creating a variable for the item retrieved from local storage
+  var storedName = localStorage.getItem("firstName");
+    //appending the name to the empty name paragraph
+  document.getElementById("congratsName").innerHTML += storedName; 
 
-var congratsMessage = document.getElementById("congratsName");
-var userName = document.getElementsById("firstName"); 
-var nameNode = document.createTextNode("Test"); 
-
-congratsMessage.appendChild(nameNode); 
-
-//append name to new text thing
-//then append text thing to div for congrats message
-
-//append username to congrats message ?? but somehow have to add name in
+}

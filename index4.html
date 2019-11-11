@@ -12,6 +12,8 @@
 </head>
 
 <body  id = "page4">
+
+    <!-- Same header class as pg1 bc they are the same almost-->
     
     <section class = "header">
             <button type="button"id="navMenuButton"  onclick = "location.href = 'index.html';">
@@ -26,32 +28,42 @@
 
         </section>
 
+    <!-- Final confirmation section-->
+
         <section id = "welcomePage">
 
-            <div id = "logoBigPg4">
+            <div id = "logoBigPg4" class="disneyLogo">
                 <img src="img/logo_white.png" alt = "Big Disney+ Logo" width = 40%>
             </div>
 
             <h1 id = "welcome">WELCOME TO</h1>
 
-            <p id = "congratsName">Congratulations, </p>
-                
+            <!--Funky sectioned out so JS can be used to add the users name to the confirmation message -->
+            <div id="userNameMessage">
+                 <p id = "congratsMessage">Congratulations,</p>
+                <p id = "congratsName"></p>
+            </div>
+
             <p id="confirmationMessage">Your account has been created!</p>
 
         </section>
 
+        <!-- Big link to start watching except it redirects to the landing page bc I didnt make the whole website-->
         <section id="watchButtonSection">
             <button type="button" id="watchButton" onclick = "location.href = 'index.html';">START WATCHING NOW!</button>
         </section>
 
+        <!--Same mickey but this time white to fit the pages colour scheme -->
         <section id="mickeyLight">
             <img src="img/mickey_light.png" alt="Mickey  Logo" width=100%>
         </section>
 
+        <!--Download on app store sectin that only actually shows when looking on a mobile device -->
+
         <section id="appStore">
             <p>Or, download our app to watch on the go:</p>
                 <!--making app store image that links to the actual app store-->
-            <img src="img/app_store.png" alt="Download on App Store" onclick = "location.href = 'https://apps.apple.com/nl/app/disney/id1446075923?l=en';">
+            <img src="img/app_store.png" alt="Download on App Store" onclick = "location.href = 'https://apps.apple.com/nl/app/disney/id1446075923?l=en';"">
         </section>
 
     <script type="text/javascript" src="script.js"></script>

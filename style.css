@@ -1,9 +1,13 @@
+/* All the CSS is in one document so it is pretty LARGE*/
+
+/* Getting rid of the default browser styles*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Setting up custom fonts*/
 @font-face {
     font-family: 'Muli', sans-serif;
     font-family: 'Noto Sans', sans-serif;
@@ -11,7 +15,8 @@
     src: "https://fonts.googleapis.com/css?family=Muli|Noto+Sans&display=swap";
 }
 
-/*body*/
+/*PAGE 1*/
+
 #page1 {
     background-color: #1D1E4C;
 }
@@ -31,7 +36,7 @@
     border-radius: 10px;
     font-size: 1em;
 }
-
+/* Separated because the colour scheme inverts throughout different pages*/
 #signInButton {
     background-color: #1D1E4C;
     color: white;
@@ -49,7 +54,7 @@
     justify-content: flex-end;
     width: 95%;
 }
-
+/* Setting up the hamburger menu in the header*/
 #nav > div {
     width: 40px;
     height: 6px;
@@ -62,6 +67,8 @@
     background-color: white;
 }
 
+/* For the big Disney+ logo*/
+
 #logoBigPg1, #logoBigPg4 {
     display: block;
     margin: 0 auto;
@@ -71,6 +78,24 @@
 #logoBigPg1  {
     margin-top: 8%;
 }
+
+/* Doing animation to fade in*/
+.disneyLogo {
+    animation-name: fadeIn;
+    animation-duration: 1.5s; 
+}
+
+@keyframes fadeIn{
+    0%{
+    opacity: 0;
+    }
+    
+    100% {
+    opacity: 1;
+    }
+} 
+
+/* For the words below the logo*/
 
 #subtitle {
     color: white;
@@ -92,6 +117,7 @@
     font-style: normal;
 }
 
+/* For the email form*/
 .signUp {
     display: block;
     text-align: center;
@@ -133,18 +159,14 @@
     font-style: italic;
 }
 
-/* only effects the form group on the 2nd page */
-.signUp .form-group {
-    width: 40%; 
-    margin-bottom: -2%; 
-}
-
 .signUp #emailPg1Form {
     display: flex;
     flex-wrap: wrap; 
     width: 100%;
     justify-content: center;
 }
+
+/* Time for the funky footer - lots of css and divs required for the layout and text styles*/
 
 #footer {
     height: 25%;
@@ -177,6 +199,9 @@
     font-size: 2em;
 
 }
+
+/* ok time for MOBILE STYLES !!! much of the same from desktop mainly just size changes*/
+
 
 /* Mobile Styles FOR PAGE 1*/
 @media only screen and (max-width: 600px) {
@@ -261,7 +286,7 @@
 
 /* PAGE TWO */
 
-/* UNIVERSAL ELEMENTS ACROSS BOTH FORM PAGES */
+/* UNIVERSAL ELEMENTS ACROSS BOTH FORM PAGES (1&2) */
 
 #page2{
     background-color: white;
@@ -319,6 +344,7 @@
 
 /* layout for all sections */
 
+
 .formInfo{
     width: 80%;
     flex: 1 0 auto;
@@ -335,12 +361,21 @@ input {
     width: 60%; 
 }
 
+/* only affects the form group in the middle 2 pages */
+.signUp .form-group {
+    width: 40%; 
+    margin-bottom: -2%; 
+}
+
 /* for all the text inside inputs */
 
 .formInfo input {
     font-size: 1.25em;
     font-style: italic;
 }
+
+/* Ok now into all of the forms themselves*/
+
 
 #names {
     width: 100%;
@@ -374,6 +409,8 @@ label {
     font-style: italic;
     color: grey;
 }
+
+/* radio boxes that like to be really annoying with their css*/
 
 /* affects both gender (pg2) and payment type (pg3) */
 
@@ -412,6 +449,8 @@ label {
     width: 15%;
 }
 
+/* Continue button - for both form pages*/
+
 .continueButton{
     margin-left: 60%;
     width: 50%;
@@ -428,12 +467,6 @@ label {
     font-size: 1.5em;
 
 }
-
-/*trying to make continue button aligned with buttom of form*/
-#page2 section:nth-of-type(2){
-    flex-wrap: wrap;
-}
-
 
 /*PAGE 3 */
 
@@ -458,6 +491,9 @@ label {
 #radioBox2 input {
     width: 7%;
 }
+
+/* Into the form content of the third page!!*/
+
 
 #cardName {
     width: 50%;
@@ -491,6 +527,8 @@ label {
     font-family: 'Milu', sans-serif;
 }
 
+/* For the checkbox for terms and conditions*/
+
 
 #agreeConditions {
     margin-left: 6%;
@@ -505,6 +543,8 @@ label {
 }
 
 /* MICKEY LOGO AT BOTTOM OF BOTH PAGES */
+/* making it stay at the bottom of the page */
+
 
 .mickeyLogo {
     position: fixed;
@@ -515,6 +555,10 @@ label {
 
 
 /* Mobile Styles FOR PAGE 2 AND 3*/
+/* again just mainly sizing changes*/
+/* mainly copied and pasted - deleted stuff that didnt need to change but left most of the content there in fear of breaking it*/
+
+
 @media only screen and (max-width: 600px) {
 
     /*PAGE 2 */
@@ -780,10 +824,14 @@ label {
 
 
 /*PAGE 4 - CONFIRMATION PAGE*/
+/* final page!*/
+
 
 #page4 {
     background-color: #1D1E4C;
 }
+
+/* This header is white so the logo has to be dark - so had to format a new logo in for the last page's header*/
 
 #logoDark {
     position: fixed;
@@ -794,8 +842,10 @@ label {
 }
 
 #logoBigPg4  {
-    margin-top: 3.5%;
+    margin-top: 3%;
 }
+
+/* Welcome text*/
 
 
 #welcome {
@@ -809,29 +859,46 @@ label {
     margin-top: -20%;
 }
 
-#congratsName {
+/* for congrats message that should have the users name in it */
+
+#congratsName, #congratsMessage, #confirmationMessage {
     font-family: 'Milu', sans-serif;
     font-size: 2em;
     font-style: italic;
     font-weight: 500;
-    margin-top: 17%;
     color: white;
     display: flex;
     flex-wrap: nowrap; 
     justify-content: center;
 }
 
-#confirmationMessage {
-    font-family: 'Milu', sans-serif;
-    font-size: 2em;
-    font-style: italic;
-    font-weight: 500;
-    margin-top: 2%;
-    color: white;
-    display: flex;
-    flex-wrap: nowrap; 
+#congratsMessage {
+    margin-top: 20%; 
+    width: 250px; 
+    text-align: right;
     justify-content: center;
 }
+
+#congratsName{
+    margin-top: 20%; 
+    width: 25%; 
+    text-align: left;
+    justify-content: left;
+    margin-left: 0px; 
+}
+
+#userNameMessage {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-left: 11%; 
+}
+
+#confirmationMessage {
+    margin-top: 1%; 
+}
+
+/* for the light mickey in the bottom corner*/
 
 #mickeyLight {
     position: fixed;
@@ -839,6 +906,7 @@ label {
     bottom: -1%;
 }
 
+/* for the big watch now button*/
 
 #watchButton {
     background-color: #438DC7;
@@ -880,29 +948,40 @@ label {
         margin-top: -35%;
     }
 
-    #congratsName {
+    #congratsName, #congratsMessage, #confirmationMessage {
         font-family: 'Milu', sans-serif;
         font-size: 1.7em;
         font-style: italic;
         font-weight: 500;
-        margin-top: 31%;
         color: white;
         display: flex;
         flex-wrap: nowrap; 
+        text-align: center; 
+    }
+    
+    #congratsMessage {
+        margin-top: 30%; 
+        width: 220px; 
+        text-align: right;
         justify-content: center;
     }
     
-    #confirmationMessage {
-        font-family: 'Milu', sans-serif;
-        font-size: 1.7em;
-        font-style: italic;
-        font-weight: 500;
-        margin-top: 2%;
-        color: white;
-        display: flex;
-        flex-wrap: nowrap; 
+    #congratsName{
+        margin-top: 30%; 
+        width: 25%; 
+        text-align: left;
+        justify-content: left;
+    }
+    
+    #userNameMessage {
+        display: flex; 
+        flex-wrap: wrap; 
         justify-content: center;
-        text-align: center;
+        margin-left: 0%; 
+    }
+    
+    #confirmationMessage {
+        margin-top: 2%; 
     }
   
 
@@ -957,3 +1036,6 @@ label {
         width: 1%;
     }
 }
+
+/* done!*/
+
