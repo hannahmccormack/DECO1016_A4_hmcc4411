@@ -238,3 +238,13 @@ function addError(messages, error) {
 //STUFF TO ADD NAME INTO FINAL PAGE
 
 //APPENDING NODES / GET ELEMENT BY ID STUFF ??
+
+var congratsMessage = document.getElementById("confirmationMessage");
+congratsMessage.innerHTML = "New Heading";
+
+//append name to new text thing
+//then append text thing to div for congrats message
+
+var userName = document.getElementsByName(firstName); 
+
+//append username to congrats message ?? but somehow have to add name in

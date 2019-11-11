@@ -41,7 +41,7 @@
     display: flex;
     justify-content: flex-end;
     padding: 7px;
-    width: 100%;
+    width: 70%;
 }
 
 .signInButtonLayout {
@@ -236,6 +236,14 @@
 
     }
 
+    .stats:nth-of-type(3){
+        margin-left: 23%; 
+    }
+
+    .stats:last-of-type {
+        visibility: hidden;
+    }
+
     .number {
         font-size: 2em;
         font-weight: bolder;
@@ -270,6 +278,8 @@
 
 #headerLogo {
     padding: 10px;
+    width: 8%; 
+    height: 8%; 
 }
 
 #signInButton2 {
@@ -626,6 +636,7 @@ label {
     div #dateInput {
         margin-left: 2%;
         margin-bottom: 4%; 
+        width: 50%; 
     }
 
     label {
@@ -705,6 +716,7 @@ label {
 
     #radioBox2 {
         width: 95%;
+        margin-bottom: 10%; 
     }
 
     #radioBox2 input {
